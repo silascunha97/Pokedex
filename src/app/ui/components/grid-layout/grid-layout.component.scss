@@ -1,0 +1,11 @@
+.flex-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.4px;
+    div{
+        background: none;
+        padding: 1.5% 1.5%;
+        margin: 0.8px;
+    }
+}

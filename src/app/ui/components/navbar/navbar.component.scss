@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@200&family=Poppins&family=Roboto&display=swap');
+
+
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
@@ -5,6 +9,25 @@
   padding: 0;
   margin: 0;
   
+  img{
+    background: none;
+    box-shadow:  black 3px 3px 16px 4px;
+    border: solid black 9px 9px 9px 16px (0.0.0.1);
+    border-radius: 50%;
+    opacity: 0.97;
+  }
+  a, .Pokedex{
+    font-weight: 300;
+    font-size: 43px;
+    text-shadow: 1px 1px 3px rgb(255, 196, 0), 0 0 10em rgb(255, 196, 0), 0 0 0.2em rgb(255, 196, 0);
+    transition: 1.2s;
+  }
+  a:hover, a.Pokedex:hover{
+    color: white;
+    background: white (0.0.1.1);
+    text-shadow: 1px 1px 3px red, 0 0 10em rgb(255, 0, 0), 0 0 0.2em rgb(255, 0, 0);
+    border-radius: 15px;
+  }
   }
 
     /* Style the links inside the navigation bar */
@@ -12,11 +35,11 @@
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px ;
   text-decoration: none;
   font-size: 17px;
   border-radius: 5px;
-  
+   
    }
 
 /* Change the color of links on hover */
@@ -29,4 +52,14 @@
 .topnav a.active {
   background-color: red;
   color: white;
+
   }
+.topnav a.Pokedex{
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+img{
+  width: 60%;
+  height: 25%;
+}

@@ -1,5 +1,6 @@
 {
   "name": "my-project",
+  "description": "Criando Pokedex com Angular e consumindo API",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

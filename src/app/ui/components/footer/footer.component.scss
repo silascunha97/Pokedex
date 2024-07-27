@@ -13,20 +13,29 @@ footer {
   position: fixed;
   width: 90%;
   
+  nav{
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    
+      strong{
+        text-shadow: 16px 16px 16px rgb(255, 196, 0), 0 0 10em rgb(255, 196, 0), 0 0 0.2em rgb(255, 196, 0);
+      }
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    
+      a {
+        color: #fff;
+        text-decoration: none;
+        }
+    }
+    }
+  }
  }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-  }
 
- a {
-  color: #fff;
-  text-decoration: none;
-  }
+
+ 

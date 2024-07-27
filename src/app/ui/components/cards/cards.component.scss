@@ -10,29 +10,24 @@
     padding: 0.2px 16px;
     background: white;
     margin: 0;
-   }
-   .Button-Deslike{
-    padding: 2px;
-    margin: 5px;
-    background: #1383F2;
-    color: white;
-    border-radius: 50% 20% / 10% 40%;
-    transition: 0.7s;
-   }
-   .Button-Like{
-    padding: 2px;
-    margin: 0;
-    background: red;
-    color: white;
-    border: opacify($color: #000000, $amount: 0) (0.0.0.0);
-    border-radius: 50% 20% / 10% 40%;
-    transition: 0.7ms;
-   }
-   button:hover{
-    background: white;
-    color: #000000;
-    padding: 8px;
-   }
+    .name-pokemon{
+      background: red;
+      color: white;
+      text-align: center;
+      border-radius: 50% 20% / 10% 40%;
+      box-shadow: 1px 1px 9px 1px black;
+      padding: 6px;
+      transition: ease-in-out 600ms;
+      
+    }
+    .name-pokemon:hover{
+      background: rgb(52,52,241);
+      background: linear-gradient(45deg, 
+      rgba(52,52,241,1) 0%, 
+      rgba(198,198,226,1) 82%, 
+      rgba(238,238,238,1) 100%);
+    }
+  }
   /* On mouse-over, add a deeper shadow */
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);

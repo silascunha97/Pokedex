@@ -2,9 +2,9 @@
 /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  border: solid black (0,0,0,1);
+  border: solid #000 (0,0,0,1);
   width: 11.534rem;
-  box-shadow: black 1.25px 1.75px 1.75px 1.9px;
+  box-shadow: #000 1.25px 1.75px 1.75px 1.9px;
   
   /* Add some padding inside the card container */
   .container {
@@ -13,7 +13,7 @@
     margin: 0;
     .name-pokemon{
       background: red;
-      color: white;
+      color: #ffffff;
       text-align: center;
       border-radius: 50% 20% / 10% 40%;
       box-shadow: 1px 1px 9px 1px black;

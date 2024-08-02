@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CardsComponent } from '../cards/cards.component';
 import { NgFor } from '@angular/common';
+import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
   selector: 'app-grid-layout',
@@ -13,6 +14,9 @@ import { NgFor } from '@angular/common';
   styleUrl: './grid-layout.component.scss'
 })
 export class GridLayoutComponent {
-pokemons = ['bulbasaur', 'bulbasaur', 'bulbasaur', 'bulbasaur', 'bulbasaur', 'bulbasaur', 'bulbasaur', 'bulbasaur', ];
+
+constructor(public pokemonService: PokemonService){}
+
+test='Teste #001'
 //numero:number = 0;
 }

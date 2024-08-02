@@ -3,6 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './ui/components/navbar/navbar.component';
 import { FooterComponent } from './ui/components/footer/footer.component';
 import { GridLayoutComponent } from './ui/components/grid-layout/grid-layout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PokemonService } from './ui/services/pokemon.service';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +12,12 @@ import { GridLayoutComponent } from './ui/components/grid-layout/grid-layout.com
   imports: [RouterOutlet, 
            NavbarComponent,
            FooterComponent,
-           GridLayoutComponent
+           GridLayoutComponent,
+           HttpClientModule
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  providers:[PokemonService]
 })
 export class AppComponent {
   title = 'My-Project';

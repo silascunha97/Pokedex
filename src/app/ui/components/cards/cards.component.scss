@@ -1,7 +1,12 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+
 :root{
   --linear-gradiente-silver: linear-gradient(45deg, rgba(127,127,127,1) 11%, rgba(161,161,161,1) 31%, rgba(195,195,195,1) 55%, rgba(192,192,192,1) 71%, rgba(237,237,237,1) 100%);
 }
+
 
 
 @keyframes glow {
@@ -14,7 +19,7 @@
   50% {
     box-shadow: 0 0 15px #c0c0c0, 0 0 10px #c0c0c0, 0 0 25px #c0c0c0;
     border-radius: 40px;
-    border-color: red;
+    border-color: #c0c0c0;
     background: white;
 
   }
@@ -33,20 +38,27 @@
   border: solid black (0,0,0,1);
   box-shadow: black 3px 3.5px 3px;
   width: 11rem;
+  animation: glow 3.7s linear infinite;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+.card:hover{
   animation: glow 6s linear infinite;
-  .card .container{
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-   
-  }
-
+}
   
   /* Add some padding inside the card container */
   .container {
     padding: 0.2px 16px;
-    background: white;
+    background: none;
     margin: 0;
+    font-size: 25px;
+    -webkit-text-stroke: white 0.5px;
+    color: black;
+    font-family: "Comic Neue", cursive;
+    font-weight: 900;
+    font-style: normal;
    }
    .Button-Deslike{
     padding: 2px;

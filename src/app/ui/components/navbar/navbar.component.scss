@@ -4,15 +4,17 @@
 
 :root{
   --linear-gradiente-silver: linear-gradient(45deg, rgba(127,127,127,1) 11%, rgba(161,161,161,1) 31%, rgba(195,195,195,1) 55%, rgba(192,192,192,1) 71%, rgba(237,237,237,1) 100%);
+  --vantablack-color{
+    background-color: #000100;
+  }
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
-  overflow: hidden;
+  background: linear-gradient(45deg, rgba(0,1,0,1) 0%, rgba(0,0,0,1) 45%, rgba(237,90,90,1) 75%, rgba(247,50,50,1) 88%, rgba(201,0,0,1) 100%);  overflow: hidden;
   padding: 0;
   margin: 0;
-  border-radius: 12px;
+  border-radius: 6px;
   width: 100%;
   border: var(--linear-gradiente-silver) solid 1.5px 5px (0.0.1.1);
   box-shadow: #c0c0c0 9px 9px 12px;
@@ -20,6 +22,7 @@
   a.active-pokeball {
     background: red;
     border-radius: 4px;
+    border-radius: 12px;
   }
 
   a.active-pokeball img {

@@ -53,43 +53,18 @@
     padding: 0.2px 16px;
     background: none;
     margin: 0;
-    font-size: 25px;
+    font-size: 15px;
     -webkit-text-stroke: white 0.5px;
     color: black;
     font-family: "Comic Neue", cursive;
     font-weight: 900;
     font-style: normal;
-   }
-   .Button-Deslike{
-    padding: 2px;
-    margin: 5px;
-    background: #1383F2;
-    color: white;
-    border-radius: 50% 20% / 10% 40%;
-    transition: 0.7s;
-   }
-   .Button-Like{
-    padding: 2px;
-    margin: 0;
-    background: red;
-    color: white;
-    border: opacify($color: #000000, $amount: 0) (0.0.0.0);
-    border-radius: 50% 20% / 10% 40%;
-    transition: 0.7ms;
-   }
-   button:hover{
-    background: white;
-    color: #000000;
-    padding: 8px;
-   }
+
   /* On mouse-over, add a deeper shadow */
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
   
+  }
 }
-
-
-
-

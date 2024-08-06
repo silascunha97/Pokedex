@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterViewInit, HostBinding } from '@angular/core';
 import {NgFor} from '@angular/common'
 
 @Component({
@@ -9,12 +9,16 @@ import {NgFor} from '@angular/common'
   styleUrl: './cards.component.scss'
 })
 export class CardsComponent {
+  @HostBinding('style.animationDelay') animationDelay!: string;
 
   @Input()
   pokemon!:string | any;
 
   @Input()
   numero!:number;
+
+
+
 
   getImagemPokemon(){
     const num_formatado = this.leadingZero(this.numero)

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardsComponent } from '../cards/cards.component';
 import { NgFor } from '@angular/common';
 import { PokemonService } from '../../services/pokemon.service';
@@ -16,6 +16,8 @@ import { PokemonService } from '../../services/pokemon.service';
 export class GridLayoutComponent {
 
 constructor(public pokemonService: PokemonService){}
+
+@Input()
 
 test='Teste #001'
 //numero:number = 0;

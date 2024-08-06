@@ -5,7 +5,18 @@
     margin-top: 0.4px;
     div{
         background: none;
-        padding: 1.5% 1.5%;
+        padding: 1.5px 1.5px;
         margin: 0.4px;
     }
+}
+
+@media (min-width: 450px){
+    .flex-container{
+        display: flexbox;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 5px;
+
+    }
+
 }

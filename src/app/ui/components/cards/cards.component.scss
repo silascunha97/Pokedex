@@ -11,20 +11,20 @@
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px #c0c0c0, 0 0 10px #c0c0c0, 0 0 15px #c0c0c0;
+    box-shadow: 0 0 2.5px #c0c0c0, 0 0 5px #c0c0c0, 0 0 15px #c0c0c0;
     border-radius: 15px;
     border-color: #c0c0c0;    
 
   }
   50% {
-    box-shadow: 0 0 15px #c0c0c0, 0 0 10px #c0c0c0, 0 0 25px #c0c0c0;
+    box-shadow: 0 0 7.5px #c0c0c0, 0 0 10px #c0c0c0, 0 0 25px #c0c0c0;
     border-radius: 40px;
     border-color: #c0c0c0;
     background: white;
 
   }
   100% {
-    box-shadow: 0 0 5px #c0c0c0, 0 0 20px#c0c0c0, 0 0 15px #c0c0c0;
+    box-shadow: 0 0 5px #c0c0c0, 0 0 20px#c0c0c0, 0 0 7.5px #c0c0c0;
     border-radius: 15px;
     border-color: #c0c0c0;
 

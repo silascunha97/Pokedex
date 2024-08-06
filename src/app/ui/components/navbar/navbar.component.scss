@@ -21,8 +21,7 @@
   box-shadow: rgb(192, 192, 192, 0.495) 3px 3px 12px;
 
   a.active-pokeball {
-    background: red;
-    border-radius: 4px;
+    background: none;
     border-radius: 12px;
   }
 
@@ -30,7 +29,7 @@
     background: red;
     border: #333 solid 3.5px;
     border-radius: 50%;
-    width: 45px;
+    width: 30px;
     animation: glow 3s linear infinite; /* Adiciona a animação glow */
     transition: ease-in 3s;
 
@@ -39,7 +38,7 @@
 
   a.text-pokedex {
     margin-left: 10px;
-    font-size: 45px;
+    font-size: 30px;
     color: #ffd700;
     -webkit-text-stroke: 1.25px #c0c0c0;
 

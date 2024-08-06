@@ -1,5 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@200&family=Poppins&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 
 /* Add a black background color to the top navigation */
@@ -8,35 +9,84 @@
   overflow: hidden;
   padding: 0;
   margin: 0;
-  border-radius: 7px;
+  border-radius: 12px;
+
+  a.active-pokeball {
+    background: red;
+    border-radius: 4px;
   }
+
+  a.active-pokeball img {
+    background: red;
+    border: #333 solid 3.5px;
+    border-radius: 50%;
+    width: 45px;
+    animation: glow 3s linear infinite; /* Adiciona a animação glow */
+    transition: ease-in 3s;
+
+
+  }
+
+  a.text-pokedex {
+    margin-left: 10px;
+    font-size: 45px;
+    color: #ffd700;
+    -webkit-text-stroke: 1.25px #c0c0c0;
+
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+    text-decoration: solid;
+    background: none;
+    text-shadow: #c0c0c0 2.5px 3px 4.7px;
+    
+  }
+}
 
 /*the links inside the navigation bar */
 .topnav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 3px 2px;
   text-decoration: none;
   font-size: 17px;
   border-radius: 5px;
-
-  }
+}
 
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: gray;
-  }
+}
 
 /* Add a color to the active/current link */
-.topnav a.active {
+.topnav a.active-poleball {
   background-color: red;
   color: white;
-  }
+}
 
-  .active{
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.active {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00;
+    border-radius: 10px;
+  
   }
+  50% {
+    box-shadow: 0 0 15px #ffff00, 0 0 2cqb #ffff00, 0 0 25px #ffff00;
+    border-radius: 25px;
+    background: white;
+  }
+  100% {
+    box-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00;
+    border-radius: 10px;
+  }
+}
+

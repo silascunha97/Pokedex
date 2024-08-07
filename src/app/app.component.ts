@@ -20,5 +20,5 @@ import { PokemonService } from './ui/services/pokemon.service';
   providers:[PokemonService]
 })
 export class AppComponent {
-  title = 'My-Project';
+  title = 'Pokedex - Utilizando Poké API V.2';
 }

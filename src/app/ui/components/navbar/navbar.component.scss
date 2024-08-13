@@ -18,43 +18,7 @@
   padding: 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 
-  .nav-items {
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-item {
-    margin-left: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .indicator-container {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-  }
-
-  .indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 5px;
-  }
-
-  .indicator.red {
-    background-color: #2600ff;
-  }
-
-  .indicator.yellow {
-    background-color: #ffff00;
-  }
-
-  .indicator.green {
-    background-color: #00ff00;
-  }
-
+ 
   a.active-pokeball {
     background: none;
     border-radius: 12px;
@@ -161,3 +125,33 @@
   }
 }
 
+.click{
+  width: 55px;
+  margin: 15px;
+  padding: 5px;
+}
+
+.indicator-container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.indicator.red {
+  background-color: #2600ff;
+}
+
+.indicator.yellow {
+  background-color: #ffff00;
+}
+
+.indicator.green {
+  background-color: #00ff00;
+}

@@ -6,6 +6,7 @@ import { GridLayoutComponent } from './ui/components/grid-layout/grid-layout.com
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonService } from './ui/services/pokemon.service';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -13,7 +14,8 @@ import { PokemonService } from './ui/services/pokemon.service';
            NavbarComponent,
            FooterComponent,
            GridLayoutComponent,
-           HttpClientModule
+           HttpClientModule,
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

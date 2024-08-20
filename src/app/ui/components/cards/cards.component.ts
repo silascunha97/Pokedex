@@ -1,10 +1,12 @@
 import { Component, Input, AfterViewInit, HostBinding } from '@angular/core';
 import {NgFor} from '@angular/common'
+import { Pokemon } from '../../interfaces/pokemon'; 
+import { PokemonTypes } from '../../interfaces/pokemon-types';
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,],
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.scss'
 })
@@ -12,12 +14,23 @@ export class CardsComponent {
   @HostBinding('style.animationDelay') animationDelay!: string;
 
   @Input()
-  pokemon!:string | any;
+  pokemon!: Pokemon;
 
   @Input()
   numero!:number;
+  
+  @Input()
+  nome!:string;
 
+  
 
+  async getTypes(): Promise<string[]> {
+    return this.pokemon.types.map(type => type.types.name) || [];
+  }
+
+  //getTypes(): string[] {
+  //  return this.pokemon?.types.map(type => type.type.name) || [];
+  //}
 
 
   getImagemPokemon(){

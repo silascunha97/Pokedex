@@ -1,16 +1,16 @@
-import { Component, Input } from '@angular/core';
-import { count } from 'rxjs';
+import { Component } from '@angular/core';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+
+
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [MatSidenavModule, MatButtonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
-
-
 
 }

@@ -1,10 +1,12 @@
 <div class="card" >
-    <img [src]="getImagemPokemon()" alt="Avatar" style="width:100%">
-    <div class="container" >
-      <h3><strong>{{this.pokemon.name}}</strong></h3>
-      <p *ngFor="let types of pokemon.types; index as i" 
-      [class]="'type-' + pokemon.types[i]" >
-        {{ pokemon.types[i]}}
-      </p>
+    <img [src]="getImagemPokemon()" alt="ID:{{this.numero}}, {{this.pokemon.name}}, {{this.pokemon.types.join( ' and ' )}}" style="width:100%">
+    <div class="container">
+      <h3 
+          [class]="'type-'+ this.pokemon.types[0]">
+          {{this.pokemon.name}}
+    </h3>
+      <p *ngFor="let types of this.pokemon.types; index as i"
+      [class]="'type-'+ this.pokemon.types[i]">
+      {{this.pokemon.types[i]}}</p>
   </div>
 </div>

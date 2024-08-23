@@ -1,15 +1,20 @@
 import { Component, Input, AfterViewInit, HostBinding } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { Pokemon } from '../../interfaces/pokemon'; 
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [NgFor,],
+  imports: [NgFor, MatSnackBarModule],
   templateUrl: './cards.component.html',
-  styleUrl: './cards.component.scss'
+  styleUrl: './cards.component.scss',
+  providers: []
 })
 export class CardsComponent {
+  
   @HostBinding('style.animationDelay') animationDelay!: string;
 
   @Input()
@@ -47,5 +52,7 @@ export class CardsComponent {
 
     return s;
   }
+
+
 
 }

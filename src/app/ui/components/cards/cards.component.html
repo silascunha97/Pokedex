@@ -1,7 +1,10 @@
 <div class="card" >
     <img [src]="getImagemPokemon()" alt="Avatar" style="width:100%">
     <div class="container" >
-    <h3><strong>{{this.pokemon.name}}</strong></h3>
-    <p>{{ pokemon.types.join(',')}}</p>
+      <h3><strong>{{this.pokemon.name}}</strong></h3>
+      <p *ngFor="let types of pokemon.types; index as i" 
+      [class]="'type-' + pokemon.types[i]" >
+        {{ pokemon.types[i]}}
+      </p>
   </div>
 </div>

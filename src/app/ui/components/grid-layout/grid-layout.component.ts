@@ -3,6 +3,8 @@ import { CardsComponent } from '../cards/cards.component';
 import { NgFor } from '@angular/common';
 import { PokemonService } from '../../services/pokemon.service';
 
+import { Type } from '@angular/compiler';
+
 @Component({
   selector: 'app-grid-layout',
   standalone: true,
@@ -15,10 +17,11 @@ import { PokemonService } from '../../services/pokemon.service';
 })
 export class GridLayoutComponent {
 
+  types: Type[] = []
+
+
 constructor(public pokemonService: PokemonService){}
 
-@Input()
 
-test='Teste #001'
-//numero:number = 0;
+
 }

@@ -1,7 +1,6 @@
 import { Component, Input, AfterViewInit, HostBinding } from '@angular/core';
-import {NgFor} from '@angular/common'
+import { NgFor } from '@angular/common';
 import { Pokemon } from '../../interfaces/pokemon'; 
-import { PokemonTypes } from '../../interfaces/pokemon-types';
 
 @Component({
   selector: 'app-cards',
@@ -22,7 +21,7 @@ export class CardsComponent {
   @Input()
   nome!:string;
 
-  
+  type: [] = []
 
   async getTypes(): Promise<string[]> {
     return this.pokemon.types.map(type => type.types.name) || [];

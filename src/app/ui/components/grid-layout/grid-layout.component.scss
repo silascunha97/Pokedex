@@ -10,6 +10,24 @@
     }
 }
 
+input{
+    width: 75%;
+    padding: 5px;
+    margin: 5px;
+}
+
+button{
+    padding: 6.8px;
+    background-color: blue;
+    margin: 8px;
+    -webkit-text-stroke: rgb(199, 199, 199) 0.28px;
+    color: #ffff;
+    border-radius: 10px;
+}
+
+
+
+
 @media (min-width: 450px){
     .flex-container{
         display: flexbox;

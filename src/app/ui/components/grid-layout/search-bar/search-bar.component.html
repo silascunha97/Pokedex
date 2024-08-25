@@ -1,0 +1,11 @@
+<div class="Search-bar">
+    <input class="input-search"
+           type="text" 
+           placeholder="Pesquisar por tipos nomes ou ID" 
+           [(ngModel)]="searchTerm"
+           (input)="onSearchChange()"
+    />
+    <button class="input-button">
+        Submit
+    </button>
+</div>

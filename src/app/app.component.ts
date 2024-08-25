@@ -5,17 +5,18 @@ import { FooterComponent } from './ui/components/footer/footer.component';
 import { GridLayoutComponent } from './ui/components/grid-layout/grid-layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonService } from './ui/services/pokemon.service';
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  
   imports: [RouterOutlet, 
            NavbarComponent,
            FooterComponent,
            GridLayoutComponent,
            HttpClientModule,
-
+           FormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -4,14 +4,16 @@ import { NgFor } from '@angular/common';
 import { PokemonService } from '../../services/pokemon.service';
 
 import { Type } from '@angular/compiler';
+import { SearchBarComponent } from "./search-bar/search-bar.component";
 
 @Component({
   selector: 'app-grid-layout',
   standalone: true,
   imports: [
     CardsComponent,
-    NgFor
-  ],
+    NgFor,
+    SearchBarComponent
+],
   templateUrl: './grid-layout.component.html',
   styleUrl: './grid-layout.component.scss'
 })

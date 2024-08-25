@@ -1,0 +1,35 @@
+.Search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 8px 12px;
+    margin-bottom: 16px;
+      
+    .input-search {
+      flex: 1;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: white;
+      margin-right: 8px;
+  
+      &:focus {
+        outline: none;
+        border: 1px solid #ccc;
+      }
+    }
+  
+    .input-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #0069d9;
+      }
+    }
+  }

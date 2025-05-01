@@ -1,19 +1,22 @@
-import { Component, Input, AfterViewInit, HostBinding } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { Pokemon } from '../../interfaces/pokemon'; 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [NgFor, MatSnackBarModule],
+  imports: [NgFor, MatSnackBarModule, RouterLink],
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.scss',
   providers: []
 })
-export class CardsComponent {
+export class CardsComponent  {
+
+  
   
   @HostBinding('style.animationDelay') animationDelay!: string;
 

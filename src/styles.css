@@ -4,8 +4,10 @@
 body{
     background: rgba(5, 4, 4,);
     background: linear-gradient(45deg, rgba(255,244,244,1) 0%, rgba(128,128,128,1) 50%, rgba(0,0,0,1) 100%);
-    background-image: url("https://i.pinimg.com/564x/31/52/b1/3152b151b84a7016d0d150b5780944eb.jpg");
-    background-repeat: repeat;
+    background-image: url("./assets/abstract-uv-ultraviolet-light-composition.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 
 }

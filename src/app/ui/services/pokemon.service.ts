@@ -33,7 +33,9 @@ export class PokemonService {
           types: details.types.map((typeInfo: any) => typeInfo.type.name), // Apenas os nomes dos tipos
         }))
       )
+      
     );
+    
 
     // Aguarda todas as requisições de tipos terminarem
     forkJoin(pokemonDetails$).subscribe((pokemonsComTipos: Pokemon[]) => {
@@ -42,7 +44,17 @@ export class PokemonService {
   }
 
   // Método para buscar detalhes do Pokémon, incluindo os tipos
-  getPokemonDetails(id: number): Observable<any> {
-    return this.httpClient.get<any>(`https://pokeapi.co/api/v2/pokemon/${id}/`);
+  getPokemonDetails(id: number): Observable<Pokemon> {
+    return this.httpClient.get<any>(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    .pipe(
+      map((response: any) => {
+        const stats = response.stats.map((stat: any) => ({
+          base_stat: stat.base_stat,
+          stat: stat.stat.name,
+        }));
+        //console.log(`${response.name} : stats:`, stats); // Log dos stats
+        return { ...response, stats };
+      })
+    );
   }
 }

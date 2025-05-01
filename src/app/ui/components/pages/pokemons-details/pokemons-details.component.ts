@@ -45,7 +45,8 @@ export class PokemonsDetailsComponent implements OnInit {
     this.pokemonService.getPokemonDetails(pokemonId).subscribe((response: any) => {
       this.pokemonStats = response.stats.map((stat: any) => ({
         name: stat.stat.name,
-        base_stat: stat.base_stat
+        base_stat: stat.base_stat,
+        
       }));
       this.pokemonName = response.name;
       this.pokemonTypes = response.types.map((typeInfo: any) => typeInfo.type.name);

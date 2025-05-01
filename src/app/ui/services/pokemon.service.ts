@@ -17,7 +17,7 @@ export class PokemonService {
 
   async carregarPokemons() {
     const requisicao = await this.httpClient
-      .get<any>('https://pokeapi.co/api/v2/pokemon?limit=151')
+      .get<any>('https://pokeapi.co/api/v2/pokemon?limit=1025') // Ajuste o limite para 1025
       .toPromise();
 
     const pokemons = requisicao.results.map((result: any, index: number) => ({
@@ -33,9 +33,7 @@ export class PokemonService {
           types: details.types.map((typeInfo: any) => typeInfo.type.name), // Apenas os nomes dos tipos
         }))
       )
-      
     );
-    
 
     // Aguarda todas as requisições de tipos terminarem
     forkJoin(pokemonDetails$).subscribe((pokemonsComTipos: Pokemon[]) => {

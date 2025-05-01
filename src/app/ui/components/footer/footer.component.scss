@@ -5,7 +5,7 @@ body{
 }
 
 footer {
-  background-color: #333;
+  background-color: blue;
   color: #fff;
   padding: 5px;
   text-align: center;
@@ -14,9 +14,10 @@ footer {
   position: relative;
   width: 100%;
   font-size: 14px;
-  border: #c0c0c0 solid 3px;
+  border: black dotted 1.5px;
   z-index: 90000  ;
-  border-bottom: none;
+  border-bottom: fixed;
+  box-shadow: #fff 1px 1px 3px 30px lighten($color: #ffffff, $amount: 0.7);
  }
 
 ul {

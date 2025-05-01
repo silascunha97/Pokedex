@@ -3,20 +3,24 @@
     <mat-card-header>
       <div mat-card-avatar class="container-card"></div>
       <mat-card-title>Nome do Pokemon</mat-card-title>
-      <div class="container-types">
-        <a>{{pokemonName}}</a>
-        <a>{{pokemonTypes}}</a>
+      <div class="container-types" >
+        <a [class]="'type-'+ this.pokemonTypes[0]">{{pokemonName}}</a>
+
+        <a 
+        *ngFor="let type of pokemonTypes; index as i"
+        [class]="'type-'+ this.pokemonTypes[i]"
+        >{{pokemonTypes[i]}}</a>
     </div>
     </mat-card-header>
-    <img mat-card-image [src]="getImagemPokemon()" alt="Imagem do Pokémon">
+    <img mat-card-image [src]="getImagemPokemon()" alt="{{this.pokemonName}}">
     <mat-card-content>
       <h3>Gráfico de Stats</h3>
    
       <canvas #radarChart></canvas>
     </mat-card-content>
     <mat-card-actions class="buttons-card">
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+      <a [routerLink]="['/pokemon-details', (+this.id) - 1]" mat-button>Back</a>
+      <a [routerLink]="['/pokemon-details', (+this.id) + 1]" mat-button>Next</a>
     </mat-card-actions>
   </div>
 </mat-card>

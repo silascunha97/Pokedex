@@ -1,23 +1,23 @@
 <mat-card class="pokemon-card-details" appearance="outlined">
   <div class="container">
-    <mat-card-header>
-      <div mat-card-avatar class="container-card"></div>
-      <mat-card-title>Nome do Pokemon:</mat-card-title>
-      <mat-card-title>Tipagem:</mat-card-title>
-      <div class="container-types" >
-        <a [class]="'type-'+ this.pokemonTypes[0]">{{pokemonName}}</a>
-
+    <mat-card-header class="container-card-header">
+      <mat-card-title>
+        Nome do Pokemon: <a [class]="'type-'+ pokemonTypes[0]">{{ pokemonName }}</a>
+      </mat-card-title>
+      <mat-card-title>
+        Tipagem:
         <a 
-        *ngFor="let type of pokemonTypes; index as i"
-        [class]="'type-'+ this.pokemonTypes[i]"
-        >{{pokemonTypes[i]}}</a>
-    </div>
+          *ngFor="let type of pokemonTypes; index as i"
+          [class]="'type-'+ pokemonTypes[i]"
+        >{{ pokemonTypes[i] }}</a>
+      </mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="getImagemPokemon()" alt="{{this.pokemonName}}">
+    <img mat-card-image [src]="getImagemPokemon()" alt="{{ pokemonName }}">
     <mat-card-content>
-      <h3>Gráfico de Stats</h3>
-   
-      <canvas #radarChart></canvas>
+      <div class="container-chart">
+        <h3>{{ descriptionText }}</h3>
+        <canvas #radarChart></canvas>
+      </div>
     </mat-card-content>
     <mat-card-actions class="buttons-card">
       <a [routerLink]="['/pokemon-details', (+this.id) - 1]" mat-button>Back</a>

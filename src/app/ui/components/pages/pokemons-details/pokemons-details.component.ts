@@ -3,9 +3,10 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { PokemonService } from '../../../services/pokemon.service';
-import { Pokemon } from '../../../interfaces/pokemon';
 import { Chart, registerables } from 'chart.js';
 import { NgFor } from '@angular/common';
+import { DescriptionService } from '../../../services/description.service';
+import { Description } from '../../../interfaces/description';
 
 Chart.register(...registerables);
 
@@ -14,7 +15,8 @@ Chart.register(...registerables);
   standalone: true,
   imports: [MatCardModule, MatButtonModule, NgFor, RouterLink],
   templateUrl: './pokemons-details.component.html',
-  styleUrl: './pokemons-details.component.scss'
+  styleUrl: './pokemons-details.component.scss',
+  providers: [PokemonService, DescriptionService]
 })
 export class PokemonsDetailsComponent implements OnInit {
   pokemonStats: { name: string; base_stat: number }[] = [];
@@ -24,18 +26,23 @@ export class PokemonsDetailsComponent implements OnInit {
   pokemonTypes: string[] = [];
   id!: number;
   chartInstance!: Chart | null; // Armazena a instância do gráfico
+  descriptionText!: string; // Propriedade para armazenar a descrição
+  description: Description[] = []; // Array de descrições
 
   constructor(
     private route: ActivatedRoute,
-    private readonly pokemonService: PokemonService
+    private readonly pokemonService: PokemonService,
+    private readonly descriptionService: DescriptionService
   ) {}
 
   ngOnInit(): void {
+    // Observa mudanças nos parâmetros da rota
     this.route.paramMap.subscribe((params) => {
       const pokemonId = params.get('id'); // Obtém o ID do Pokémon da rota
       if (pokemonId) {
         this.id = +pokemonId; // Converte o ID para número
         this.loadPokemonDetails(this.id); // Carrega os detalhes do Pokémon
+        this.loadPokemonDescription(this.id); // Carrega a descrição do Pokémon
       }
     });
   }
@@ -46,11 +53,19 @@ export class PokemonsDetailsComponent implements OnInit {
       this.pokemonStats = response.stats.map((stat: any) => ({
         name: stat.stat.name,
         base_stat: stat.base_stat,
-        
       }));
       this.pokemonName = response.name;
       this.pokemonTypes = response.types.map((typeInfo: any) => typeInfo.type.name);
       this.renderRadarChart(); // Atualiza o gráfico
+    });
+  }
+
+  loadPokemonDescription(pokemonId: number): void {
+    // Busca a descrição do Pokémon com base no ID
+    this.descriptionService.getDescription().subscribe((response: Description[]) => {
+      const pokemonDescription = response.find((desc: Description) => desc.id === pokemonId); // Encontra a descrição correspondente ao ID
+      this.descriptionText = pokemonDescription?.description || 'Descrição não encontrada'; // Atribui a descrição ou uma mensagem padrão
+      return this.descriptionText // Log da descrição
     });
   }
 
@@ -90,7 +105,7 @@ export class PokemonsDetailsComponent implements OnInit {
   }
 
   getImagemPokemon() {
-    const num_formatado = this.route.snapshot.params['id'].padStart(3, '0');
+    const num_formatado = this.id.toString().padStart(3, '0');
     return `https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/${num_formatado}.png`;
   }
 }

@@ -1,20 +1,32 @@
 .pokemon-card-details {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    align-items: center;
+    /* Centraliza o card no meio da tela */
     display: flex;
     flex-direction: column;
-    padding: 5px 5px 5px 5px;
-    margin: 25px 25px;
-    background-color: none;
-    box-shadow: #fff 3px 3px 9px 15px inset;
-    border-color: gold;
-    border-style: dotted;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Posiciona o card em relação à tela */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o ponto de referência para o centro */
+    width: 90%; /* Ajuste conforme necessário para responsividade */
+    max-width: 600px; /* Limita a largura máxima */
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 15px;
-  /* Add some padding inside the card container */
+    background-color: white;
+    border: 2px dotted gold;
+    text-align: center;
+    margin-top: 240px;
+
+    /* Add shadows to create the "card" effect */
+    transition: 0.3s;
+    position: auto;
+
     .container {
         align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
         padding: 5px;
         margin: 5px;
         background-color: none;
@@ -28,11 +40,29 @@
         display: block;
         margin: auto;
       }
+
+      .container-chart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+        margin: 5px auto;
+        background-color: none;
+        box-shadow: #fff 3px 3px 9px 15px inset;
+        border-color: gold solid;
+        border-radius: 15px;
+        height: 50%;
+        width: 50%;
+      }
     }
   }
 
   .buttons-card{
-    justify-content: space-around;
+    display: flex;
+    justify-content: space-between; /* Espaça os botões uniformemente */
+    width: 100%; /* Garante que os botões ocupem toda a largura */
+    margin-top: 15px;
     text-align: center;
   }
 
@@ -43,6 +73,8 @@
     margin: 5px;
     font-weight: 550;
     font-size: 1rem;
+    justify-items: center;
+    text-align: center;
     &.type-normal {
       background-color: #A8A878;
       color: white;
@@ -148,4 +180,13 @@
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
-  
+
+  .container-types {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha, se necessário */
+    gap: 5px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    margin-top: 5px;
+  }
+

@@ -8,20 +8,21 @@
     top: 50%; /* Centraliza verticalmente */
     left: 50%; /* Centraliza horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta o ponto de referência para o centro */
-    width: 90%; /* Ajuste conforme necessário para responsividade */
-    max-width: 600px; /* Limita a largura máxima */
+    width: 100%; /* Ajuste conforme necessário para responsividade */
+    max-width: 550px; /* Limita a largura máxima */
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     background-color: white;
     border: 2px dotted gold;
     text-align: center;
-    margin-top: 240px;
+    margin-top: 18rem;
+
 
     /* Add shadows to create the "card" effect */
     transition: 0.3s;
-    position: auto;
 
+    
     .container {
         align-items: center;
         justify-content: center;
@@ -34,8 +35,9 @@
         border-color: gold solid;
         border-radius: 15px;
       img{
-        width: 80px;
-        height: 80px;
+        width: 100%;
+        height: 100%;
+        max-width: 120px;
         border-radius: 50px;
         display: block;
         margin: auto;
@@ -52,8 +54,9 @@
         box-shadow: #fff 3px 3px 9px 15px inset;
         border-color: gold solid;
         border-radius: 15px;
-        height: 50%;
-        width: 50%;
+        height: 100%;
+        width: 100%;
+        max-width: 290px;
       }
     }
   }

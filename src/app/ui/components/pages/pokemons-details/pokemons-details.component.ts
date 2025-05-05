@@ -56,17 +56,22 @@ export class PokemonsDetailsComponent implements OnInit {
       }));
       this.pokemonName = response.name;
       this.pokemonTypes = response.types.map((typeInfo: any) => typeInfo.type.name);
+      this.description
       this.renderRadarChart(); // Atualiza o gráfico
+      return this.descriptionText
     });
   }
 
   loadPokemonDescription(pokemonId: number): void {
     // Busca a descrição do Pokémon com base no ID
-    this.descriptionService.getDescription().subscribe((response: Description[]) => {
+    this.descriptionService.getDescription()
+    .subscribe((response: Description[]) => {
       const pokemonDescription = response.find((desc: Description) => desc.id === pokemonId); // Encontra a descrição correspondente ao ID
       this.descriptionText = pokemonDescription?.description || 'Descrição não encontrada'; // Atribui a descrição ou uma mensagem padrão
+      //console.log(this.descriptionText) // Log da descrição
       return this.descriptionText // Log da descrição
     });
+    
   }
 
   renderRadarChart(): void {

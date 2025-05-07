@@ -11,12 +11,15 @@
 
 /* Add a black background color to the top navigation */
 .topnav {
+  padding: 0;
+  margin: 0;
   background-color: #e82222;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
 
  
   a.active-pokeball {

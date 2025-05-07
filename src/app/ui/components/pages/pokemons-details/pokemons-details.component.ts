@@ -7,13 +7,14 @@ import { Chart, registerables } from 'chart.js';
 import { NgFor } from '@angular/common';
 import { DescriptionService } from '../../../services/description.service';
 import { Description } from '../../../interfaces/description';
+import {MatIconModule} from '@angular/material/icon';
 
 Chart.register(...registerables);
 
 @Component({
   selector: 'app-pokemons-details',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, NgFor, RouterLink],
+  imports: [MatCardModule, MatButtonModule, NgFor, RouterLink, MatIconModule],
   templateUrl: './pokemons-details.component.html',
   styleUrl: './pokemons-details.component.scss',
   providers: [PokemonService, DescriptionService]

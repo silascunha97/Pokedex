@@ -16,12 +16,21 @@
     background-color: white;
     border: 2px dotted gold;
     text-align: center;
-    margin-top: 18rem;
+    margin-top: 20rem;
+
 
 
     /* Add shadows to create the "card" effect */
     transition: 0.3s;
 
+
+    .buttom-back{
+      align-self: start;
+      background: none;
+      padding: 15px 10px;
+      color: none;
+      border-radius: 15px;
+    }
     
     .container {
         align-items: center;
@@ -193,3 +202,11 @@
     margin-top: 5px;
   }
 
+  @media(max-width: 1115px){
+
+    .pokemon-card-details{
+        margin-top: 20rem;
+        
+    }
+
+}

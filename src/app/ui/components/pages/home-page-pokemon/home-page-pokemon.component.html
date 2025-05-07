@@ -1,1 +1,70 @@
-<p>home-page-pokemon works!</p>
+ 
+  <main class="hero">
+    <div class="container text-center">
+      <h1 class="h1-title">Portifolio Pokedex</h1>
+      <p>
+            Este projeto é uma Pokedex interativa desenvolvida com Angular,
+          utilizando a Poke API V2 para obter informações detalhadas sobre os Pokémon.
+          Além disso, o Chart.js foi integrado para visualizar estatísticas dos Pokémon
+          por meio de gráficos dinâmicos, proporcionando uma experiência visual rica e intuitiva.
+          Com um design responsivo e moderno, esta Pokedex permite buscas eficientes,
+          filtragem personalizada e exibição de dados em tempo real. 
+            Ideal para fãs da franquia que desejam explorar o universo Pokémon de maneira interativa!
+        </p>
+        <a 
+         [routerLink]="['all-cards-pokemon']" 
+         class="btn btn-primary"
+         >Abrir Cards</a>
+    </div>
+  </main>
+  
+  <section class="features-container">
+    <div class="row">
+      <div class="col-md-4 card-box">
+        <div class="feature-box">
+          <div class="container-image">
+            <img class="box-img" src="https://avatars.githubusercontent.com/u/119726629?v=4" alt="Feature 1" width="250">
+            </div>
+          <h3>Quem sou!</h3>
+          <p>
+                Meu nome é Silas Augusto, sou desenvolvedor de sistemas Web apaixonado por tecnologia e inovação.
+            Além de criar soluções eficientes e escaláveis, sou um entusiasta do universo Pokémon e um treinador dedicado.
+             Busco sempre encontrar pontos de convergência entre meus hobbies e minha paixão pelo desenvolvimento, 
+            transformando criatividade e conhecimento em experiências únicas e envolventes.</p>
+        </div>
+      </div>
+      <div class="col-md-4 card-box">
+        <div class="feature-box">
+          <div class="container-image">
+            <img class="box-img" src="../../../../../assets/Angular A Letter New 2024.png" alt="Feature 2" width="350">
+            </div>
+            <h3>Tecnologias usadas no Portifolio: </h3>
+            <p>
+                    Atualmente, desenvolvo aplicações web utilizando Angular,
+                um poderoso framework para construção de interfaces dinâmicas e escaláveis.
+                 Com RxJS, gerencio operações assíncronas e manipulação de dados reativos de forma eficiente.
+                  As integrações com APIs REST garantem comunicação fluida entre o front-end e os serviços back-end.
+                O uso de SCSS permite estilizações avançadas e organizadas, enquanto o Angular Material proporciona
+                componentes modernos e acessíveis para uma interface intuitiva. Além disso, foco na construção de um front-end responsivo,
+                garantindo uma experiência fluida em diferentes dispositivos.</p>
+        </div>
+      </div>
+      <div class="col-md-4 card-box">
+        <div class="feature-box">
+          <div class="container-image">
+            <img class="box-img" src="../../../../../assets/Gb3hPTXWQAA74Nc.jpeg" alt="Feature 3" width="250" height="250">
+            </div>
+            <h3>Porque o tema de Pokémon?</h3>
+            <p>
+                    Escolhi Pokémon como tema para este projeto porque a franquia sempre me inspirou com seu universo vasto e envolvente. 
+                    Utilizando a Poke API V2, consigo consumir dados detalhados dos Pokémon e aplicar minha criatividade para transformar essas
+                informações em elementos visuais, animações e gráficos interativos. O uso de tecnologias como Angular e Chart.js me permite representar
+                estatísticas de forma dinâmica, tornando a experiência mais intuitiva e envolvente. 
+                    Assim, minha paixão pela franquia serve como catalisador para inovação, unindo entretenimento e desenvolvimento
+                web em um projeto único.
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,4 +1,5 @@
 # MyProject
+[![Netlify Status](https://api.netlify.com/api/v1/badges/46a5ccdd-d897-42bb-b7e2-a2c6c9e1cc2b/deploy-status)](https://app.netlify.com/projects/pokedex-silascunha97/deploys)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
